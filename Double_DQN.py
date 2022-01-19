@@ -393,9 +393,6 @@ if __name__ == "__main__":
     # the unit_packet_filure_reward is changed to -5, the dnn_learning_rate is changed to 0.0001, the epsilon_decay is used as 0.97 whose value will become 0.05 after 99 episode since the min_epsilon is 0.05. 
     agent = Agent(environment=env, unit_packet_success_reward=1, unit_packet_failure_reward=-5, discount_factor=0.9, 
                   dnn_learning_rate=0.0001, initial_epsilon=1, epsilon_decay=0.97, min_epsilon=0.05) 
-
-    # When submitting, the training part should be excluded,
-    # and it should be submitted in a form that can be evaluated by loading the trained model like agent.test()
     
     # the model is trained for 120 episode given that the environment interaction time is 500000.
     
