@@ -345,7 +345,5 @@ if __name__ == "__main__":
     agent = Agent(environment=env, unit_packet_success_reward=1, unit_packet_failure_reward=-5, discount_factor=0.9,
                   dnn_learning_rate=0.0001, initial_epsilon=1, epsilon_decay=0.989, min_epsilon=0.05)
 
-    # When submitting, the training part should be excluded,
-    # and it should be submitted in a form that can be evaluated by loading the trained model like agent.test()
     agent.train(num_episode=300, run_time=500000, dnn_epochs=10)
     agent.test(10000000)
